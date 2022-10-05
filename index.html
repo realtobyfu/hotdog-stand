@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Joe's Hotdog Stand</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400&family=Montserrat:wght@300;700;900&family=Ubuntu&display=swap" rel="stylesheet">
+        
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Javascript -->
+  <script type="text/javascript" src="javascript.js"></script>
+
+  </head>
+
+<body>
+  <section>
+  <h1> 🔥 Joe's Hotdog Stand 🌭🔥 </h1>
+  <table class="row">
+    <tr>
+      <td class="t1">
+        <h2>Items ordered:</h2>
+      </td>
+      <td class="t2">
+        <h2 id="hotdog"> </h2>
+        <h2 id="fries"> </h2>
+        <h2 id="soda"> </h2>
+      </td>
+    </tr>
+  </table>
+  <h2 id="subtotals"></h2>
+  <h2 id="discount"></h2>
+  <h2 id="tax"></h2>
+  <h2 id="total"></h2>
+ </section>
+
+  <script type="text/javascript">
+    document.getElementById("hotdog").innerHTML = h + " Hotdogs";
+    document.getElementById("fries").innerHTML = f + " French Fries";
+    document.getElementById("soda").innerHTML = s + " Drinks";
+    document.getElementById("subtotals").innerHTML = "Subtotal: $" + subtotal;
+    if (subtotal > 20) {
+      document.getElementById("discount (10%)").innerHTML = "Discount: $" + discount;
+    }
+    document.getElementById("tax").innerHTML = "Tax: $" + tax;
+    document.getElementById("total").innerHTML = "Final Total: $" + total;
+  </script>  
+</body>
+
+</html>
