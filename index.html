@@ -38,18 +38,18 @@
   <h2 id="discount"></h2>
   <h2 id="tax"></h2>
   <h2 id="total"></h2>
- </section>
+  </section>
 
   <script type="text/javascript">
     document.getElementById("hotdog").innerHTML = h + " Hotdogs";
     document.getElementById("fries").innerHTML = f + " French Fries";
     document.getElementById("soda").innerHTML = s + " Drinks";
     document.getElementById("subtotals").innerHTML = "Subtotal: $" + subtotal;
+    document.getElementById("tax").innerHTML = "Tax: $" + tax;
+    document.getElementById("total").innerHTML = "Final Total: $" + total;
     if (subtotal > 20) {
       document.getElementById("discount (10%)").innerHTML = "Discount: $" + discount;
     }
-    document.getElementById("tax").innerHTML = "Tax: $" + tax;
-    document.getElementById("total").innerHTML = "Final Total: $" + total;
   </script>  
 </body>
 
