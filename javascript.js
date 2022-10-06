@@ -5,9 +5,10 @@ s = prompt("How many sodas do you want?");
 var tax, total, discount = 0, subtotal = 4.25 * h + 2.6 * f + 1.5 * s;
 if (subtotal > 20) {
   discount = subtotal * .1;
+  subtotal = subtotal - discount;
 }
-total = subtotal - discount;
 tax = subtotal * .0625;
+total = subtotal + tax;
 discount = discount.toFixed(2);
 subtotal = subtotal.toFixed(2);
 tax = tax.toFixed(2);
