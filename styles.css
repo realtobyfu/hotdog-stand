@@ -17,15 +17,22 @@ section {
     text-align: center;
     margin-left: 10%;
     margin-top: 2%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 10px;
+    font-weight: 200;
 
+}
+
+select {
+    height: 10%;
 }
 
 .row {
     text-align: left;
-    margin-left: 20%;
+    margin-left: 10%;
     border-style: dashed;
     border-color: white;
-    border-radius: 5%;
+    border-radius: 2%;
     margin-top: 5%;
     margin-bottom: 5%;
 }
