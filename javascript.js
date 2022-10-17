@@ -10,16 +10,18 @@ function read(){
 
 
 function calculate (h, f, s) {
-  var tax, total, discount = 0, subtotal = 4.25 * h + 2.6 * f + 1.5 * s;
+  var pH = 4.25, pF = 2.60, pD = 1.50;
+  var tax, total, discount = 0, subtotal = pH * h + pF * f + pD * s;
   if (subtotal > 20) {
     discount = subtotal * .1;
   }
-  total = subtotal - discount;
+  subtotal = subtotal - discount;
   tax = subtotal * .0625;
-  discount = discount.toFixed(2);
-  subtotal = subtotal.toFixed(2);
-  tax = tax.toFixed(2);
-  total = total.toFixed(2);
+  discount = Math.round(discount * 100) / 100;
+  subtotal = Math.round(subtotal * 100) / 100;
+  tax = Math.round(tax * 100) / 100;
+  total = subtotal + tax;
+  total = Math.round(total * 100) / 100;
 
   document.getElementById("hotdog").innerHTML = h + " Hotdogs";
   document.getElementById("fries").innerHTML = f + " French Fries";
@@ -28,6 +30,6 @@ function calculate (h, f, s) {
   document.getElementById("tax").innerHTML = "Tax: $" + tax;
   document.getElementById("total").innerHTML = "Final Total: $" + total;
   if (subtotal > 20) {
-    document.getElementById("discount (10%)").innerHTML = "Discount: $" + discount;
+    document.getElementById("discount").innerHTML = "Discount(10%): $" + discount;
   }
 }
